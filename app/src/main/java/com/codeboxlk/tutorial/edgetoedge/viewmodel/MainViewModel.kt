@@ -5,12 +5,14 @@ import androidx.lifecycle.viewModelScope
 import com.codeboxlk.tutorial.edgetoedge.data.DataStoreManager
 import com.codeboxlk.tutorial.edgetoedge.data.DataStoreManager.Companion.darkModeKey
 import com.codeboxlk.tutorial.edgetoedge.data.DataStoreManager.Companion.dynamicColorKey
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class MainViewModel @Inject constructor(
     private val dataStoreManager: DataStoreManager
 ): ViewModel() {
